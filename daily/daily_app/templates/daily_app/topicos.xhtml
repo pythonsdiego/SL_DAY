@@ -1,0 +1,16 @@
+{% extends 'daily_app/base.xhtml' %}
+
+{% block content %}
+<p>Tópicos</p>
+<ul>
+    {% for topico in topicos %}
+    <li>
+        <a href="{% url 'daily_app:topico' topico.id %}">
+        {{ topico.texto }}</a></li>
+        </li>
+    {% empty %}
+        <li>Nenhum tópico foi adicionado ainda.</li>
+    {% endfor %}
+
+</ul>
+{% endblock content %}

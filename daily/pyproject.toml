@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "daily"
+version = "0.1.0"
+description = ""
+authors = ["diego <pythonsdiego@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

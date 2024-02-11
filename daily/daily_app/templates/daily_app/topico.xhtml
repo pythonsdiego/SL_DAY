@@ -1,0 +1,17 @@
+{% extends 'daily_app/base.xhtml' %}
+{% block content %}
+
+<p>Topico: {{ topico.texto }}</p>
+
+<p>Entradas:</p>
+<ul>
+    {% for entrada in entradas %}
+    <li>
+        <p>{{ entrada.criado_em|date:'M d, Y H:i' }}</p>
+        <p>{{ entrada.texto|linebreaks }}</p>
+    </li>
+    {% empty %}
+    <li>Ainda não há entradas para este tópico.</li>
+    {% endfor %}
+</ul>
+{% endblock content %}
